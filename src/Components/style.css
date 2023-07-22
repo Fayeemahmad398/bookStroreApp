@@ -1,0 +1,139 @@
+body {
+  margin: 0px;
+  background: #ecd5c4;
+}
+* {
+  box-sizing: border-box;
+}
+.topimginline {
+  transform: rotate(-20deg);
+  margin: 20px;
+}
+
+.threeobjs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid red;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.threeobj {
+  display: flex;
+  border: 2px solid blue;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  margin: 20px auto;
+}
+.morebooks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.img-more-books {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.inclineimg {
+  transform: rotate(30deg);
+  width: 50%;
+  height: 70%;
+}
+.img-more-books {
+  border: 3px solid grey;
+  width: 250px;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+#navbar {
+  border: 1px solid black;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #413f3f;
+}
+.imgnav,
+#grouplogo {
+  height: 30px;
+  width: 30px;
+  margin: 0px 15px;
+  border-radius: 20px;
+}
+#leftBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px;
+}
+#leftBox h1,
+strong {
+  margin: 0px 5px;
+  color: rgb(250, 75, 75);
+}
+#leftBox h1 {
+  font-size: 20px;
+  color: rgb(248, 35, 15);
+}
+
+#rightBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  height: 32px;
+  width: 400px;
+  margin: 0px 20px;
+  outline: none;
+  box-shadow: 5px 5px 5px rgb(108, 107, 107);
+  padding: 0px 10px;
+  background: #edebeb;
+}
+main {
+  margin-top: 60px;
+}
+.alllimits {
+  margin: 0px auto;
+  width: 90%;
+}
+
+@media (max-width: 1000px) {
+  .threeobjs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .morebooks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .threeobjs {
+    grid-template-columns: 1fr;
+  }
+  .morebooks {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 90%;
+  }
+  .img-more-books {
+    width: 90%;
+  }
+  #leftBox {
+    font-size: 20px;
+  }
+}
