@@ -10,27 +10,27 @@ const Navbar = (props) => {
       <div id="leftBox">
         <img src={grouplogo} id="grouplogo" alt="" />
         <h1>KeazoNBOOKS</h1>
-        <strong>Books</strong>
+        <strong id="strong">Books</strong>
       </div>
 
+      <input
+        type="text"
+        onChange={(event) => {
+          props.setSearchTerm(event.target.value.trim());
+        }}
+        placeholder="search the books here"
+      />
       <div id="rightBox">
-        <input
-          type="text"
-          onChange={(event) => {
-            props.setSearchTerm(event.target.value.trim());
-          }}
-          placeholder="search"
-        />
-
         <button
           onClick={() => {
             props.ApiCallThroughSearchTerm();
           }}
+          className="search"
         >
           Search
         </button>
-        <img className="imgnav" src={bx_bx} alt="" />
-        <img className="imgnav" src={fluent} alt="" />
+        <img className="imgnav disappearimg" src={bx_bx} alt="" />
+        <img className="imgnav disappearimg" src={fluent} alt="" />
         <img className="imgnav" src={ic} alt="" />
         <img className="imgnav" src={rightimg} alt="" />
       </div>

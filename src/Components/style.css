@@ -7,53 +7,85 @@ body {
 }
 .topimginline {
   transform: rotate(-20deg);
-  margin: 20px;
+  margin: 35px;
 }
-
+#nowread {
+  background: #000;
+  color: white;
+}
 .threeobjs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 2px solid red;
-  justify-items: center;
-  justify-content: space-between;
+  /* border: 2px solid red; */
 }
 
 .threeobj {
+  margin: 10px;
   display: flex;
-  border: 2px solid blue;
+  border: 2px solid rgb(129, 129, 133);
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  width: fit-content;
+  height: 259px;
+  width: 90%;
   margin: 20px auto;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.search {
+  background: #000;
+  color: white;
+  font-size: 15px;
+  width: 80px;
 }
 .morebooks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-self: center;
 }
 .img-more-books {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  height: fit-content;
 }
 .inclineimg {
   transform: rotate(30deg);
-  width: 50%;
-  height: 70%;
+  height: 140px;
+  width: 140px;
+}
+.imgtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  gap: 30px;
+  height: 250px;
+  padding: 20px;
+}
+img {
+  border-radius: 10px;
+  margin-top: 20px;
 }
 .img-more-books {
-  border: 3px solid grey;
+  border: 1px solid red;
+  border-radius: 10px;
+
   width: 250px;
   height: 250px;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 10px auto;
+  background: #131212;
 }
 #navbar {
   border: 1px solid black;
-  height: 55px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -85,7 +117,6 @@ strong {
   color: rgb(250, 75, 75);
 }
 #leftBox h1 {
-  font-size: 20px;
   color: rgb(248, 35, 15);
 }
 
@@ -97,22 +128,72 @@ strong {
 }
 input {
   height: 32px;
-  width: 400px;
+  width: 100%;
   margin: 0px 20px;
   outline: none;
-  box-shadow: 5px 5px 5px rgb(108, 107, 107);
+  box-shadow: 4px 4px 4px rgb(143, 142, 142);
   padding: 0px 10px;
   background: #edebeb;
+  outline: none;
+  outline: 1px solid grey;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.singleimgdetails {
+  width: 180px;
+  margin: 10px;
 }
 main {
   margin-top: 60px;
 }
 .alllimits {
   margin: 0px auto;
-  width: 90%;
+  width: 100%;
+  /* border: 3px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
+.detailsOfClickedBook {
+  height: fit-content;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: fit-content;
+  width: fit-content;
+  margin: 10px;
+}
+button {
+  height: 25px;
+  width: 90px;
+  background: #000;
+  border-radius: 5px;
 
-@media (max-width: 1000px) {
+  margin: 10px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 1050px) {
+  .imgnav {
+    height: 25px;
+    width: 25px;
+    margin: 0px 5px;
+  }
+  #leftBox h1 {
+    font-size: 15px;
+  }
+  #grouplogo {
+    margin: 0px 5px;
+  }
+
+  input {
+    width: 100%;
+    margin: 0px 5px;
+  }
+
   .threeobjs {
     grid-template-columns: 1fr 1fr;
   }
@@ -125,15 +206,30 @@ main {
   .threeobjs {
     grid-template-columns: 1fr;
   }
+  #strong {
+    display: none;
+  }
+  .threeobj {
+    width: 100%;
+  }
   .morebooks {
     grid-template-columns: 1fr;
     justify-items: center;
-    width: 90%;
   }
   .img-more-books {
     width: 90%;
   }
   #leftBox {
-    font-size: 20px;
+    font-size: 15px;
+    margin: 0px;
+  }
+  #leftBox h1 {
+    display: none;
+  }
+  .disappearimg {
+    display: none;
+  }
+  input {
+    font-size: 15px;
   }
 }

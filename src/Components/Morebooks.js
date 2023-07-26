@@ -1,14 +1,17 @@
 const MoreBooks = (props) => {
-  const TotalData = [...props.data1, ...props.data2];
+  let TotalData = [];
+  if (props.data1.length > 0 || props.data2.length > 0) {
+    TotalData = [...props.data1, ...props.data2];
+  }
 
   console.log(TotalData);
-  console.log(props);
+  // console.log(props);
 
   return (
     <>
       <h1>More Books</h1>
       <div className="morebooks">
-        {TotalData.length > 0 ? (
+        {!props.error && TotalData.length > 0 ? (
           TotalData.map((obj) => {
             return (
               <div
@@ -18,13 +21,19 @@ const MoreBooks = (props) => {
                   props.setClickedBook(obj);
                 }}
               >
-                {obj.volumeInfo.imageLinks.thumbnail && (
-                  <img
-                    className="inclineimg"
-                    src={obj.volumeInfo.imageLinks.thumbnail}
-                    alt=""
-                  />
-                )}
+                {console.log(obj)}
+                {!props.error &&
+                obj.volumeInfo.imageLinks &&
+                obj.volumeInfo.imageLinks.thumbnail ? (
+                  <div className="imgtitle">
+                    <img
+                      className="inclineimg"
+                      src={obj.volumeInfo.imageLinks.thumbnail}
+                      alt=""
+                    />
+                    <strong>{obj.volumeInfo.title}</strong>
+                  </div>
+                ) : null}
               </div>
             );
           })
